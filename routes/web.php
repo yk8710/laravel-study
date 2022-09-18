@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UnityController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\RequestSampleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +32,7 @@ Route::get('/omikuji', [GameController::class, 'omikuji']);
 
 // モンティ・ホール問題
 Route::get('/monty-hall', [GameController::class, 'montiHall']);
+
+// リクエスト
+Route::get('/form', [RequestSampleController::class, 'form']);
+Route::get('/query-strings', [RequestSampleController::class, 'queryStrings']);
