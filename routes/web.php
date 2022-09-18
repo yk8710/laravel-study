@@ -46,4 +46,4 @@ Route::get('/login', [RequestSampleController::class, 'loginForm']);
 Route::post('/login', [RequestSampleController::class, 'login'])->name('login');
 
 // イベント
-Route::resource('/events', EventController::class);
+Route::resource('/events', EventController::class)->only(['create', 'store']);
