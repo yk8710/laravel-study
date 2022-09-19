@@ -54,4 +54,5 @@ Route::resource('/events', EventController::class)->only(['create', 'store']);
 Route::get('/hi-low', [HiLowController::class, 'index'])->name('hi-low');
 Route::post('/hi-low', [HiLowController::class, 'result']);
 
-Route::resource('/photos', PhotoController::class)->only(['create', 'store']);
+// ファイル管理
+Route::resource('/photos', PhotoController::class)->only(['create', 'store', 'show']);
